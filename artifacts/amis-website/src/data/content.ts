@@ -9,6 +9,7 @@ export const PRODUCTS = [
     color: "from-blue-500 to-primary",
     pdfUrl: "pdfs/amipol-karta-techniczna.pdf",
     pdfLabel: "AMIPOL – Karta Techniczna",
+    specImageUrl: "specs/amipol-specyfikacja.jpg",
   },
   {
     id: "amipox",
@@ -19,6 +20,7 @@ export const PRODUCTS = [
     color: "from-emerald-500 to-accent",
     pdfUrl: "pdfs/amipox-karta-techniczna.pdf",
     pdfLabel: "AMIPOX – Karta Techniczna",
+    specImageUrl: "specs/amipox-specyfikacja.jpg",
   },
   {
     id: "amiksyd",
@@ -29,6 +31,7 @@ export const PRODUCTS = [
     color: "from-purple-500 to-indigo-800",
     pdfUrl: "pdfs/amiksyd-karta-techniczna.pdf",
     pdfLabel: "AMIKSYD – Karta Techniczna",
+    specImageUrl: "specs/amiksyd-specyfikacja.jpg",
   },
   {
     id: "amipur",
@@ -39,6 +42,7 @@ export const PRODUCTS = [
     color: "from-orange-500 to-red-700",
     pdfUrl: null,
     pdfLabel: null,
+    specImageUrl: null,
   }
 ];
 

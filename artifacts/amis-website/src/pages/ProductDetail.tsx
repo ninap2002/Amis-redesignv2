@@ -83,6 +83,36 @@ export default function ProductDetail() {
           </div>
         </div>
       </div>
+
+      {product.specImageUrl && (
+        <div className="border-t border-border bg-gray-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
+              <div>
+                <h2 className="text-3xl font-bold text-primary">Dane Techniczne</h2>
+                <p className="text-muted-foreground mt-1">Szczegółowa specyfikacja produktu {product.name}</p>
+              </div>
+              {product.pdfUrl && (
+                <a
+                  href={`${import.meta.env.BASE_URL}${product.pdfUrl}`}
+                  download={product.pdfLabel ?? undefined}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent/90 text-white rounded-xl font-bold transition-all shadow hover:shadow-md"
+                >
+                  <FileDown className="w-5 h-5" />
+                  Pobierz PDF
+                </a>
+              )}
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-border">
+              <img
+                src={`${import.meta.env.BASE_URL}${product.specImageUrl}`}
+                alt={`${product.name} – dane techniczne`}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 }
