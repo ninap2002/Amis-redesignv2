@@ -2,6 +2,8 @@ import { Layout } from "@/components/layout/Layout";
 import { PRODUCTS } from "@/data/content";
 import { useParams, Link } from "wouter";
 import { ArrowLeft, CheckCircle2, FileDown } from "lucide-react";
+import TechnicalSpecs from "@/components/TechnicalSpecs";
+import { TECH_SPECS } from "@/data/techSpecs";
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -84,32 +86,26 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      {product.specImageUrl && (
-        <div className="border-t border-border bg-gray-50">
+      {TECH_SPECS[product.id] && (
+        <div className="border-t border-border bg-gray-50/60">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
+            <div className="flex items-center justify-between mb-10 flex-wrap gap-4">
               <div>
-                <h2 className="text-3xl font-bold text-primary">Dane Techniczne</h2>
-                <p className="text-muted-foreground mt-1">Szczegółowa specyfikacja produktu {product.name}</p>
+                <span className="text-xs font-bold tracking-widest text-accent uppercase">Specyfikacja produktu</span>
+                <h2 className="text-3xl font-bold text-primary mt-1">Dane Techniczne — {product.name}</h2>
               </div>
               {product.pdfUrl && (
                 <a
                   href={`${import.meta.env.BASE_URL}${product.pdfUrl}`}
                   download={product.pdfLabel ?? undefined}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent/90 text-white rounded-xl font-bold transition-all shadow hover:shadow-md"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold transition-all shadow hover:shadow-md"
                 >
                   <FileDown className="w-5 h-5" />
-                  Pobierz PDF
+                  Pobierz Kartę Techniczną (PDF)
                 </a>
               )}
             </div>
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-border">
-              <img
-                src={`${import.meta.env.BASE_URL}${product.specImageUrl}`}
-                alt={`${product.name} – dane techniczne`}
-                className="w-full h-auto"
-              />
-            </div>
+            <TechnicalSpecs productId={product.id} />
           </div>
         </div>
       )}
