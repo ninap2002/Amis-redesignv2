@@ -1,0 +1,22 @@
+packages:
+  "framer-motion": "For stunning page transitions, hover states, and smooth dropdown menus"
+  "clsx": "Utility for conditionally joining classNames"
+  "tailwind-merge": "Utility to merge tailwind classes"
+
+images:
+  - path: "artifacts/amis-website/public/images/hero-bg.png"
+    description: "Abstract powder coating industrial background in deep navy blue with subtle vibrant green laser light accents, professional corporate style, modern manufacturing"
+    aspect_ratio: "16:9"
+  - path: "artifacts/amis-website/public/images/lab-bg.png"
+    description: "Clean modern laboratory setting with microscopes and scientific testing equipment, well lit, professional, subtle blue and green tones"
+    aspect_ratio: "16:9"
+  - path: "artifacts/amis-website/public/images/powder-explosion.png"
+    description: "Vibrant cloud explosion of green and blue fine powder paint on a crisp white background, high resolution 3D render, abstract and artistic"
+    aspect_ratio: "16:9"
+  - path: "artifacts/amis-website/public/images/factory.png"
+    description: "Modern clean industrial factory floor showing powder coating process, high tech manufacturing, bright and professional"
+    aspect_ratio: "16:9"
+
+notes:
+  - "The site operates entirely on the client side as a corporate informational site."
+  - "Old URLs are handled via explicit Wouter redirects to ensure SEO juice and old links don't break."
