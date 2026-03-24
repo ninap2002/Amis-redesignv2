@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { PRODUCTS } from "@/data/content";
 import { useParams, Link } from "wouter";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2, FileDown } from "lucide-react";
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -52,13 +52,24 @@ export default function ProductDetail() {
               </ul>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
               <Link href="/kontakt" className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-center transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                 Skontaktuj się z nami
               </Link>
-              <Link href="/produkty/zapytanie" className="px-8 py-4 bg-white border-2 border-primary text-primary hover:bg-gray-50 rounded-xl font-bold text-center transition-all">
-                Karty Techniczne (TDS)
-              </Link>
+              {product.pdfUrl ? (
+                <a
+                  href={`${import.meta.env.BASE_URL}${product.pdfUrl}`}
+                  download={product.pdfLabel ?? undefined}
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent hover:bg-accent/90 text-white rounded-xl font-bold text-center transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                >
+                  <FileDown className="w-5 h-5" />
+                  Pobierz Kartę Techniczną (PDF)
+                </a>
+              ) : (
+                <Link href="/produkty/zapytanie" className="px-8 py-4 bg-white border-2 border-primary text-primary hover:bg-gray-50 rounded-xl font-bold text-center transition-all">
+                  Zapytaj o Kartę Techniczną
+                </Link>
+              )}
             </div>
           </div>
 

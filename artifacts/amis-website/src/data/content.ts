@@ -7,6 +7,8 @@ export const PRODUCTS = [
     description: "Farby, których podstawowym składnikiem są sieciujące żywice poliestrowe. Charakteryzują się bardzo dobrą odpornością na warunki atmosferyczne, korozję i wysokie temperatury.",
     applications: ["Meble ogrodowe", "Znaki drogowe", "Zewnętrzne elementy samochodów", "Rowery", "Zastosowania zewnętrzne"],
     color: "from-blue-500 to-primary",
+    pdfUrl: "pdfs/amipol-karta-techniczna.pdf",
+    pdfLabel: "AMIPOL – Karta Techniczna",
   },
   {
     id: "amipox",
@@ -15,6 +17,8 @@ export const PRODUCTS = [
     description: "Farby, których podstawowym składnikiem są żywice poliestrowo-epoksydowe. Charakteryzują się dobrymi właściwościami mechanicznymi i chemicznymi oraz odpornością na żółknięcie termiczne.",
     applications: ["Meble biurowe", "Oświetlenie domowe", "Obudowy komputerów", "Grzejniki", "Sejfy", "Zastosowania wewnętrzne"],
     color: "from-emerald-500 to-accent",
+    pdfUrl: "pdfs/amipox-karta-techniczna.pdf",
+    pdfLabel: "AMIPOX – Karta Techniczna",
   },
   {
     id: "amiksyd",
@@ -23,6 +27,8 @@ export const PRODUCTS = [
     description: "Farby, których podstawowym składnikiem są odpowiednio katalizowane żywice epoksydowe. Charakteryzują się wysoką odpornością na środki chemiczne i korozję.",
     applications: ["Kanistry i baki na paliwo", "Elementy wyposażenia szpitali", "Obudowy maszyn", "Powierzchnie narażone na chemikalia"],
     color: "from-purple-500 to-indigo-800",
+    pdfUrl: "pdfs/amiksyd-karta-techniczna.pdf",
+    pdfLabel: "AMIKSYD – Karta Techniczna",
   },
   {
     id: "amipur",
@@ -31,6 +37,8 @@ export const PRODUCTS = [
     description: "Farby klasy premium na bazie żywic poliuretanowych. Oferują najwyższą jakość wykończenia, doskonałą rozlewność i wybitną odporność na czynniki zewnętrzne.",
     applications: ["Wysokiej klasy sprzęt AGD", "Architektura premium", "Elementy wymagające perfekcyjnego wyglądu"],
     color: "from-orange-500 to-red-700",
+    pdfUrl: null,
+    pdfLabel: null,
   }
 ];
 

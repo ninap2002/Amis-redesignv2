@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "wouter";
 import { PRODUCTS } from "@/data/content";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileDown } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Products() {
@@ -49,13 +49,27 @@ export default function Products() {
                     </div>
                   </div>
 
-                  <Link 
-                    href={`/produkty/${prod.id}`}
-                    className="mt-auto inline-flex items-center justify-between px-6 py-4 bg-gray-50 group-hover:bg-primary group-hover:text-white rounded-xl text-primary font-bold transition-all"
-                  >
-                    Szczegóły produktu
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  <div className="mt-auto flex flex-col sm:flex-row gap-3">
+                    <Link 
+                      href={`/produkty/${prod.id}`}
+                      className="flex-1 inline-flex items-center justify-between px-6 py-4 bg-gray-50 group-hover:bg-primary group-hover:text-white rounded-xl text-primary font-bold transition-all"
+                    >
+                      Szczegóły produktu
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    {prod.pdfUrl && (
+                      <a
+                        href={`${import.meta.env.BASE_URL}${prod.pdfUrl}`}
+                        download={prod.pdfLabel ?? undefined}
+                        onClick={e => e.stopPropagation()}
+                        className="inline-flex items-center justify-center gap-2 px-5 py-4 bg-accent/10 hover:bg-accent hover:text-white rounded-xl text-accent font-bold transition-all"
+                        title={`Pobierz kartę techniczną ${prod.name}`}
+                      >
+                        <FileDown className="w-5 h-5" />
+                        <span className="sm:hidden">Karta Techniczna</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             ))}
