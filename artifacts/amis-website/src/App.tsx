@@ -61,6 +61,12 @@ function Router() {
       {/* Main Routes */}
       <Route path="/" component={Home} />
       <Route path="/o-firmie" component={About} />
+      <Route path="/o-firmie/siec-dystrybucji">
+        {() => <GenericPage title="Sieć dystrybucji" content="Farby proszkowe AMIS dostępne są przez sieć autoryzowanych dystrybutorów regionalnych na terenie całej Polski oraz poprzez eksport bezpośredni. Nasi partnerzy handlowi zapewniają doradztwo techniczne, próbki kolorów oraz szybką dostawę. Aby znaleźć dystrybutora w Twoim regionie lub uzyskać informacje o warunkach współpracy hurtowej, skontaktuj się z naszym działem handlowym pod adresem biuro@amis.pl lub telefonicznie: +48 89 537 51 52." />}
+      </Route>
+      <Route path="/o-firmie/referencje">
+        {() => <GenericPage title="Referencje" content="Farby proszkowe AMIS są stosowane przez czołowych producentów mebli metalowych, elementów architektonicznych, sprzętu AGD, elementów samochodowych oraz wyposażenia przemysłowego w Polsce i za granicą. Długoletnia współpraca z wymagającymi klientami przemysłowymi jest najlepszym potwierdzeniem jakości naszych produktów. Referencje i listy polecające dostępne są na życzenie — prosimy o kontakt z działem handlowym." />}
+      </Route>
       <Route path="/produkty" component={Products} />
       <Route path="/produkty/zapytanie">
         {() => <GenericPage title="Zapytanie o karty techniczne" content="Prosimy o kontakt przez formularz w dziale Kontakt w celu uzyskania kart technicznych produktów." />}
@@ -75,7 +81,13 @@ function Router() {
         {() => <GenericPage isSubpage={true} />}
       </Route>
       <Route path="/kontakt" component={Contact} />
-      
+      <Route path="/kontakt/przedstawiciele">
+        {() => <GenericPage title="Przedstawiciele — rynek krajowy" content="Nasi przedstawiciele handlowi obsługują klientów na terenie całego kraju, zapewniając doradztwo techniczne, prezentacje produktów i wsparcie aplikacyjne. Podział na regiony oraz dane kontaktowe do poszczególnych przedstawicieli dostępne są u koordynatora sprzedaży krajowej. Zapraszamy do kontaktu pod adresem biuro@amis.pl lub telefonicznie: +48 89 537 51 52." />}
+      </Route>
+      <Route path="/kontakt/eksport">
+        {() => <GenericPage title="Dział eksportu" content="Amis Farby Proszkowe aktywnie rozwija sprzedaż eksportową. Oferujemy produkty zgodne z normami europejskimi, dokumentację w językach obcych, certyfikaty analiz i dostawy do krajów UE oraz poza nią. Zapytania eksportowe prosimy kierować na adres: export@amis.pl lub kontaktować się bezpośrednio z działem eksportu pod numerem +48 89 537 51 52." />}
+      </Route>
+
       {/* Informational Pages */}
       <Route path="/b2b">
         {() => <GenericPage title="Strefa B2B" content="Platforma hurtowa dostępna wyłącznie dla zweryfikowanych partnerów biznesowych. Skontaktuj się z działem handlowym, aby uzyskać dostęp." />}
