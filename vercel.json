@@ -1,0 +1,9 @@
+{
+  "buildCommand": "pnpm --filter @workspace/amis-website build",
+  "outputDirectory": "artifacts/amis-website/dist/public",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "env": {
+    "BASE_PATH": "/"
+  }
+}
