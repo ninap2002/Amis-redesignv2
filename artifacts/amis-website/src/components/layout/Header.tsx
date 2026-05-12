@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, Droplet } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -56,24 +56,18 @@ export function Header() {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "glass-nav py-3" : "bg-white py-5"
+        isScrolled ? "glass-nav py-3" : "bg-zinc-900 py-5"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-800 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-              <Droplet className="text-white w-6 h-6" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display font-bold text-xl leading-tight text-primary tracking-wide">
-                AMIS
-              </span>
-              <span className="text-[0.65rem] font-semibold text-accent uppercase tracking-widest leading-none">
-                Farby Proszkowe
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <img
+              src={`${import.meta.env.BASE_URL}images/new-logo.png`}
+              alt="AMIS Farby Proszkowe"
+              className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -90,8 +84,8 @@ export function Header() {
                   className={cn(
                     "px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 flex items-center gap-1",
                     location === item.href || location.startsWith(item.href + '/')
-                      ? "text-primary bg-primary/5" 
-                      : "text-foreground/80 hover:text-primary hover:bg-gray-50"
+                      ? "text-white bg-white/15"
+                      : "text-white/75 hover:text-white hover:bg-white/10"
                   )}
                 >
                   {item.label}
@@ -142,8 +136,8 @@ export function Header() {
               Strefa B2B
             </Link>
             
-            <button 
-              className="lg:hidden p-2 text-foreground/80 hover:text-primary"
+            <button
+              className="lg:hidden p-2 text-white/80 hover:text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

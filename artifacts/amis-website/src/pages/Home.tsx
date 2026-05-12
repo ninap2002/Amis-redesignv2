@@ -37,7 +37,7 @@ export default function Home() {
             <h2 className="text-accent font-bold tracking-widest uppercase mb-4 text-sm md:text-base">
               Amis Farby Proszkowe
             </h2>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-balance">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-balance text-white">
               Nasz wkład w <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-emerald-300">Wasz sukces</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto text-balance font-medium">
