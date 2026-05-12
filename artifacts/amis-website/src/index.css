@@ -103,6 +103,6 @@
   }
   
   .glass-nav {
-    @apply bg-white/90 backdrop-blur-md border-b border-border/50 shadow-sm;
+    @apply bg-zinc-900/95 backdrop-blur-md border-b border-white/10 shadow-md;
   }
 }
