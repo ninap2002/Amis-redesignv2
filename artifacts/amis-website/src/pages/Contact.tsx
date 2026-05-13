@@ -25,7 +25,7 @@ export default function Contact() {
       <div className="bg-primary text-white py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Kontakt</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl text-emerald-100 max-w-2xl mx-auto">
             Jesteśmy do Twojej dyspozycji. Skontaktuj się z nami telefonicznie, mailowo lub wypełniając poniższy formularz.
           </p>
         </div>

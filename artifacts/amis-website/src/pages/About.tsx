@@ -11,7 +11,7 @@ export default function About() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">O Firmie</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto text-balance">
+          <p className="text-xl text-emerald-100 max-w-2xl mx-auto text-balance">
             Poznaj historię marki AMIS i naszą filozofię budowania trwałych relacji z klientami przemysłowymi.
           </p>
         </div>

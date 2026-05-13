@@ -78,7 +78,7 @@ export default function Products() {
           <div className="bg-primary text-white rounded-3xl p-8 md:p-12 text-center relative overflow-hidden shadow-2xl">
             <div className="relative z-10">
               <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">Potrzebujesz kart technicznych?</h3>
-              <p className="text-blue-100 max-w-2xl mx-auto mb-8">
+              <p className="text-emerald-100 max-w-2xl mx-auto mb-8">
                 Skontaktuj się z naszym działem technologicznym aby uzyskać szczegółowe karty techniczne (TDS) oraz karty charakterystyki (SDS) dla naszych produktów.
               </p>
               <Link href="/produkty/zapytanie" className="inline-block px-8 py-4 bg-accent hover:bg-accent/90 text-white rounded-xl font-bold shadow-lg transition-all hover:-translate-y-1">
