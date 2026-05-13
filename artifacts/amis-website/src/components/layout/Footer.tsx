@@ -1,28 +1,22 @@
 import { Link } from "wouter";
-import { Droplet, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#12143A] text-white pt-20 pb-10">
+    <footer className="bg-zinc-900 text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
+
           {/* Brand */}
           <div className="flex flex-col gap-6">
-            <Link href="/" className="flex items-center gap-3 group inline-block">
-              <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-lg">
-                <Droplet className="text-white w-6 h-6" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display font-bold text-xl leading-tight text-white tracking-wide">
-                  AMIS
-                </span>
-                <span className="text-[0.65rem] font-semibold text-accent/80 uppercase tracking-widest leading-none">
-                  Farby Proszkowe
-                </span>
-              </div>
+            <Link href="/" className="inline-block">
+              <img
+                src={`${import.meta.env.BASE_URL}images/new-logo.png`}
+                alt="AMIS Farby Proszkowe"
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               Producent wysokiej jakości farb proszkowych przeznaczonych dla różnorodnych branż przemysłowych. Nasz wkład w Wasz sukces.
@@ -31,7 +25,7 @@ export function Footer() {
 
           {/* Siedziba */}
           <div className="flex flex-col gap-6">
-            <h3 className="font-display font-bold text-lg">Siedziba Firmy</h3>
+            <h3 className="font-display font-bold text-lg text-accent">Siedziba Firmy</h3>
             <ul className="flex flex-col gap-4 text-gray-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0" />
@@ -50,7 +44,7 @@ export function Footer() {
 
           {/* Zakład */}
           <div className="flex flex-col gap-6">
-            <h3 className="font-display font-bold text-lg">Zakład Produkcyjny</h3>
+            <h3 className="font-display font-bold text-lg text-accent">Zakład Produkcyjny</h3>
             <ul className="flex flex-col gap-4 text-gray-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0" />
@@ -65,7 +59,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-col gap-6">
-            <h3 className="font-display font-bold text-lg">Na Skróty</h3>
+            <h3 className="font-display font-bold text-lg text-accent">Na Skróty</h3>
             <ul className="flex flex-col gap-3 text-gray-400 text-sm font-medium">
               {[
                 { label: "O firmie", href: "/o-firmie" },
