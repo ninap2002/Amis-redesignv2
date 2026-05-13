@@ -46,8 +46,8 @@
 
 :root {
   /* AMIS Brand Colors */
-  /* Primary Dark: #191B4E */
-  --primary: 238 51% 20%;
+  /* Primary Dark Green: ~#112B18 */
+  --primary: 141 55% 15%;
   --primary-foreground: 0 0% 100%;
   
   /* Accent Green: #3AA15E */
@@ -66,17 +66,17 @@
   --popover-foreground: 0 0% 20%;
   --popover-border: 0 0% 90%;
 
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 238 51% 20%;
+  --secondary: 141 30% 95%;
+  --secondary-foreground: 141 55% 15%;
 
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
+  --muted: 141 30% 95%;
+  --muted-foreground: 0 0% 45%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
+  --border: 141 20% 88%;
+  --input: 141 20% 88%;
   --ring: 141 47% 43%;
 
   --radius: 0.75rem; 

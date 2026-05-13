@@ -16,7 +16,7 @@ export default function Laboratory() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
               Nowoczesne Laboratorium
             </h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-emerald-100">
               Nieprzerwanie inwestujemy w nasz sprzęt badawczy, by dostarczać produkty najwyższej jakości i wyznaczać nowe standardy w branży.
             </p>
           </div>
